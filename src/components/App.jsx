@@ -26,7 +26,7 @@ export class App extends Component {
     return (
       <>
         <Section title={feedbackTitle}>
-          <FeedbackOptions btnGood={this.hendleAddFeedback} />
+          <FeedbackOptions addFeedback={this.hendleAddFeedback} />
         </Section>
         <Section title={statisticsTitle}>
           <Statistics
