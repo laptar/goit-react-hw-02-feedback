@@ -3,13 +3,6 @@ import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 export class App extends Component {
-  static defaultProps = {
-    feedbackTitle: 'Please leave feedback',
-    statisticsTitle: 'Statistics',
-  };
-
-  static propTypes = {};
-
   state = {
     good: 0,
     neutral: 0,
@@ -21,14 +14,13 @@ export class App extends Component {
   };
 
   render() {
-    const { feedbackTitle, statisticsTitle } = this.props;
     const { good, neutral, bad } = this.state;
     return (
       <>
-        <Section title={feedbackTitle}>
+        <Section title={'Please leave feedback'}>
           <FeedbackOptions addFeedback={this.hendleAddFeedback} />
         </Section>
-        <Section title={statisticsTitle}>
+        <Section title={'Statistics'}>
           <Statistics
             good={good}
             neutral={neutral}
